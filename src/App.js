@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Containter from './components/ContainerComponent';
+import Content from './components/ContentComponent';
+import Header from './components/HeaderComponent';
 function App() {
   return (
-    <header>
-      <h1>Hi!</h1>
-      <img src={logo} className="1" alt="logo"></img>
-    </header>
+    <div className="wrapper">
+      <Header />
+      <Content />
+    </div>
   );
 }
 export default App;
