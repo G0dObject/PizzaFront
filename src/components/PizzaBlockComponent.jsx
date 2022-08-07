@@ -3,22 +3,22 @@ function PizzaBlock(props) {
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
         <a href="/pizza/8">
-          <img className="pizza-block__image" src={props.ImgUrl} alt="Pizza" />
-          <h4 className="pizza-block__title">{props.Title}</h4>
+          <img className="pizza-block__image" src={props.imageUrl} alt="Pizza" />
+          <h4 className="pizza-block__title">{props.title}</h4>
         </a>
         <div className="pizza-block__selector">
           <ul>
             <li className="active">тонкое</li>
-            <li className>традиционное</li>
+            <li className="passive">традиционное</li>
           </ul>
           <ul>
             <li className="active">26 см.</li>
-            <li className>30 см.</li>
-            <li className>40 см.</li>
+            <li className="passive">30 см.</li>
+            <li className="passive">40 см.</li>
           </ul>
         </div>
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">от {props.Price} ₽</div>
+          <div className="pizza-block__price">от {props.price} ₽</div>
           <button className="button button--outline button--add">
             <svg
               width={12}

@@ -4,19 +4,28 @@ import '../scss/components/_header.scss';
 import PizzaBlock from './PizzaBlockComponent';
 
 function Containter() {
-  var responce = fetch('https://localhost:7000/api/Menu');
-  console.log(responce);
+  const [items, setItems] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://localhost:5001/api/menu')
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setItems(data);
+      });
+  }, []);
   return (
     <div className="container">
       <div className="content__top">
         <div className="categories">
           <ul>
             <li className="active">Все</li>
-            <li className>Мясные</li>
-            <li className>Вегетарианская</li>
-            <li className>Гриль</li>
-            <li className>Острые</li>
-            <li className>Закрытые</li>
+            <li className="passive">Мясные</li>
+            <li className="passive">Вегетарианская</li>
+            <li className="passive">Гриль</li>
+            <li className="passive">Острые</li>
+            <li className="passive">Закрытые</li>
           </ul>
         </div>
         <div className="sort">
@@ -39,7 +48,9 @@ function Containter() {
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">
-        <PizzaBlock Title="Test" Price="200" />
+        {items.map((obj) => (
+          <PizzaBlock key={obj.id} {...obj} />
+        ))}
       </div>
     </div>
   );

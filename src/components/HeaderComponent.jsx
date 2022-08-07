@@ -4,10 +4,10 @@ import '../scss/components/_header.scss';
 
 function Header() {
   return (
-    <div class="header">
-      <div class="container">
+    <div className="header">
+      <div className="container">
         <a href="/">
-          <div class="header__logo">
+          <div className="header__logo">
             <img
               width="60"
               src="https://cdn-icons-png.flaticon.com/512/599/599995.png"
@@ -19,10 +19,10 @@ function Header() {
           </div>
         </a>
 
-        <div class="header__cart">
-          <a class="button button--cart" href="/cart">
+        <div className="header__cart">
+          <a className="button button--cart" href="/cart">
             <span>0 ₽</span>
-            <div class="button__delimiter"></div>
+            <div className="button__delimiter"></div>
 
             <span>0</span>
           </a>
