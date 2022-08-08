@@ -18,7 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start":  "set HTTPS=true&&set SSL_CRT_FILE=./reactcert/cert.pem&&set SSL_KEY_FILE=./reactcert/key.pem&&react-scripts start"
+    "start":  "set HTTPS=true&&set SSL_CRT_FILE=./reactcert/cert.pem&&set SSL_KEY_FILE=./reactcert/key.pem&&react-scripts start",
+    "Development":  "set HTTPS=true&&set SSL_CRT_FILE=./reactcert/cert.pem&&set SSL_KEY_FILE=./reactcert/key.pem&&react-scripts start"
   },
   "eslintConfig": {
     "extends": [

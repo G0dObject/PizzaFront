@@ -7,7 +7,7 @@ function Containter() {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('https://localhost:5001/api/menu')
+    fetch('https://pizza.gotdns.ch/api/menu')
       .then((response) => {
         return response.json();
       })
