@@ -2,12 +2,13 @@ import React from 'react';
 import '../scss/app.scss';
 import '../scss/components/_header.scss';
 import PizzaBlock from './PizzaBlockComponent';
+import Category from './CategoryComponent';
 
 function Containter() {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('https://pizza.gotdns.ch/api/menu')
+    fetch('https://localhost:5001/api/menu')
       .then((response) => {
         return response.json();
       })
@@ -18,16 +19,7 @@ function Containter() {
   return (
     <div className="container">
       <div className="content__top">
-        <div className="categories">
-          <ul>
-            <li className="active">Все</li>
-            <li className="passive">Мясные</li>
-            <li className="passive">Вегетарианская</li>
-            <li className="passive">Гриль</li>
-            <li className="passive">Острые</li>
-            <li className="passive">Закрытые</li>
-          </ul>
-        </div>
+        <Category></Category>
         <div className="sort">
           <div className="sort__label">
             <svg
