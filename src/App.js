@@ -1,13 +1,19 @@
-import Content from './components/ContentComponent';
-import Header from './components/HeaderComponent';
-
+import SidebarWrapper from './components/Sidebar/SidebarWrapper';
+// import CartWrapper from './components/Cart/CartWrapper';
+import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './scss/app.scss';
 function App() {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-  return (
-    <div className="wrapper">
-      <Header />
-      <Content />
-    </div>
-  );
+	return (
+		<>
+			<SidebarWrapper />
+			{/* <CartWrapper /> */}
+			<BrowserRouter>
+				<Routes>
+					<Route index element={<Home />} />
+				</Routes>
+			</BrowserRouter>
+		</>
+	);
 }
 export default App;
