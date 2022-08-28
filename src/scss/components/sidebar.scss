@@ -1,57 +1,75 @@
 .sidebarWrapper {
-    height: 100%;
-    width: 260px;
-    position: absolute;
-    z-index: 1;
-    background-color: white; 
-    overflow-x: hidden; 
-    padding-top: -16px;
+	height: 100%;
+	width: 260px;
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+	overflow-x: hidden;
+	padding-top: -16px;
+}
+.sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: left;
+	padding: 10% 20%;
+	justify-content: center;
+	flex-direction: column;
 }
 
-.sidebar{
-  display: flex;
-  flex-wrap:wrap;
-  align-items: left;
-  padding: 20px 40px;
-  justify-content: center;
-  flex-direction: column;
-  
-}
-.sidebar-icon{
-    width: 30px;
-    height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+.sidebar-icon {
+	width: 30px;
+	height: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .sidebar-item {
-    font-size: 24px;
-    text-decoration: none;
-    display: inline-flex;
-    padding: 0 20px 0;
-    margin-bottom: 30px;
+	font-size: 24px;
+	text-decoration: none;
+	display: inline-flex;
+	padding: 0 0 0 10%;
+	margin-bottom: 30px;
+	width: fit-content;
 }
 
 .sidebar-item * {
-    font-size: 24px;
-    color: black;
-    text-decoration: none;
-    margin-right: 20px;
+	font-size: 24px;
+	color: black;
+	text-decoration: none;
+	margin-right: 10%;
 }
 
-.sidebar-link{
-    display: flex;
+.sidebar-link {
+	display: flex;
+	width: 100%;
 }
 
 .sidebar-item *:hover {
-    color: #FF9846;
+	color: #ff9846;
 }
 
-#stick{
-    margin-top: 46px;
-    margin-bottom: 30px;
-    width: 180px;
-    height: 0px;
-    border: 0.5px solid #A4ACAD;
-    opacity: 0.5;
+#stick {
+	margin-top: 46px;
+	margin-bottom: 30px;
+	width: 100%;
+	height: 0px;
+	border: 0.5px solid #a4acad;
+	opacity: 0.5;
+}
+
+//Phone
+@media (max-width: 1000px) {
+	.sidebarWrapper {
+		width: 70px;
+	}
+	.sidebar-link {
+		visibility: hidden;
+	}
+	.sidebar-link * {
+		visibility: visible;
+	}
+	#stick {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
 }

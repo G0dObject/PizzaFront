@@ -1,4 +1,4 @@
-import HeaderContact from './HeaderContact';
+import HeaderContact from "./HeaderContact";
 function Header() {
 	return (
 		<>
