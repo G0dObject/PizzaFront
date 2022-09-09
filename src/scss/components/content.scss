@@ -1,0 +1,14 @@
+.content {
+	background: black;
+	min-width: 950px;
+	width: 60%;
+	height: 100vh;
+	position: absolute;
+	margin-top: $ContentMarginTop;
+	left: $SideBarWidth + 170px;
+}
+@media screen and (max-width: $Phone-width) {
+	.content {
+		display: none;
+	}
+}

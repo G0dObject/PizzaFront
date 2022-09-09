@@ -1,34 +1,92 @@
-.header{
+.header {
 	top: 0;
 	height: fit-content;
-	width: 100%;
+	width: 80%;
 	position: absolute;
-	margin-left: 320px;	
-	border-bottom: 1px solid #A4ACAD;
+	margin-left: 275px;
+	border-bottom: 1px solid #a4acad;
 }
-.header-sity{
+.header-phone {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.header-phone-hours-wrapper {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.header-contact {
+	height: 100%;
+}
+.header-phone-hours {
+	display: flex;
+}
+.logo-sm {
+	display: none;
+}
+@media screen and (max-width: $Phone-width) {
+	.header {
+		background-color: white;
+		margin: 0;
+		width: 100%;
+		height: 10%;
+	}
+	.header-phone {
+		margin-left: 10%;
+	}
+	.header-phone * {
+		width: max-content;
+	}
+	.header-phone-hours * {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.header-phone-hours {
+		display: inline-block;
+		width: 100px;
+		text-align: center;
+	}
+
+	.header-phone-hours-wrapper {
+		margin-left: 6%;
+		width: 100px;
+	}
+	.header .header-contact {
+		border: none;
+		display: flex;
+	}
+	.logo-sm {
+		margin-left: 10%;
+		margin-top: auto;
+		margin-bottom: auto;
+		height: 80%;
+		display: block;
+	}
+}
+.header-sity {
 	position: absolute;
 	font-size: 25px;
 }
-
-.header-phone-title{
+.header-phone-title {
 	opacity: 1;
-	margin: 0 0 0 10px;
 	font-size: 18px;
 	overflow: auto;
+	text-align: center;
 	color: black;
 }
-.header-phone-hours *{
+.header-phone-hours * {
 	font-size: 14px;
 	margin-bottom: 0;
 }
-.header-phone-numbers{
+
+.header-phone-numbers {
 	margin-left: 20px;
 	font-size: 14px;
-	color: #FF9846;
+	text-align: center;
+	color: #ff9846;
 }
-.header-contact{
+.header-contact {
 	padding-right: 10px;
 	width: fit-content;
-	border-right:solid #A4ACAD 1px;
+	border-right: solid #a4acad 1px;
 }

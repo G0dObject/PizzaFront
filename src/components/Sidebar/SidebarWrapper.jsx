@@ -1,4 +1,6 @@
-import Logo from "../../assets/img/logo.svg";
+import LogoSm from "../../assets/img/logo-without-text.png";
+import LogoLg from "../../assets/img/logo.png";
+
 import PizzaLogo from "../../assets/img/pizza.svg";
 import SetsLogo from "../../assets/img/sets.svg";
 import WokLogo from "../../assets/img/wok.svg";
@@ -8,72 +10,79 @@ import SaladLogo from "../../assets/img/salad.svg";
 import SoupLogo from "../../assets/img/soup.svg";
 import CorndogsLogo from "../../assets/img/corndogs.svg";
 import DrinkLogo from "../../assets/img/drink.svg";
+import { Link } from "react-router-dom";
 
 function SidebarWrapper() {
 	return (
 		<div className="sidebarWrapper">
 			<div className="sidebar">
-				<img className="logo" src={Logo} alt="logo"></img>
+				<Link to="/">
+					<img className="logo-lg" src={LogoLg} alt="logo"></img>
+				</Link>
+				<Link to="/">
+					<img className="logo-sm" src={LogoSm} alt="logo1"></img>
+				</Link>
+
 				<div id="stick"></div>
-				<ul className="sidebar">
+				<ul className="sidebar-items">
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link">
 							<img className="sidebar-icon" src={PizzaLogo} alt="Pizza"></img>
 							Pizza
-						</a>
+						</Link>
 					</li>
 
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={SetsLogo} alt="Pizza"></img>
 							Sets
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={WokLogo} alt="Pizza"></img>
 							Wok
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={RollsLogo} alt="Pizza"></img>
 							Rolls
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={SushiLogo} alt="Pizza"></img>
 							Sushi
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={SaladLogo} alt="Pizza"></img>
 							Salad
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={SoupLogo} alt="Pizza"></img>
 							Soup
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img
 								className="sidebar-icon"
 								src={CorndogsLogo}
 								alt="Pizza"
 							></img>
 							Corndogs
-						</a>
+						</Link>
 					</li>
 					<li className="sidebar-item">
-						<a className="sidebar-link" href="/">
+						<Link to="/about" className="sidebar-link" href="/">
 							<img className="sidebar-icon" src={DrinkLogo} alt="Pizza"></img>
 							Drink
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>

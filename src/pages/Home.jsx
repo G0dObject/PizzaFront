@@ -1,13 +1,15 @@
-// import { Button } from 'react-bootstrap';
-import Header from '../components/Header/Header';
-
-import SidebarWrapper from '../components/Sidebar/SidebarWrapper';
+import Header from "../components/Header/Header";
+import Content from "../components/Content/Content";
+import SidebarWrapper from "../components/Sidebar/SidebarWrapper";
+import CartWrapper from "../components/Cart/CartWrapper";
 
 function Home() {
 	return (
 		<>
 			<SidebarWrapper />
+			{/* <CartWrapper /> */}
 			<Header />
+			{/* <Content /> */}
 		</>
 	);
 }
